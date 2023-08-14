@@ -17,6 +17,7 @@ int main(void)
 	while (d < 10)
 	{
 		printf("%d", d);
+		d++;
 	}
 	putchar('\n');
 	return (0);
