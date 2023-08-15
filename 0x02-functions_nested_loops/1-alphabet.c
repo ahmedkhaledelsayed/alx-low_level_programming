@@ -2,14 +2,11 @@
 #include "main.h"
 
 /**
- * main -  Entry point
- *
  * Description: a c program that prints  alphabet, in lowercase
  *
- * Return: 0
 */
 
-int main(void)
+void print_alphabet(void)
 {
 	char c = 'a';
 
@@ -18,5 +15,4 @@ int main(void)
 		_putchar(c);
 		c++;
 	}
-	return (0);
 }
