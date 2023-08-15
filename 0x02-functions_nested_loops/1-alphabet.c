@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * Description: a c program that prints  alphabet, in lowercase
+ * print_alphabet - a c program that prints  alphabet, in lowercase
  *
 */
 
@@ -15,4 +15,5 @@ void print_alphabet(void)
 		_putchar(c);
 		c++;
 	}
+	_putchar('\n');
 }
