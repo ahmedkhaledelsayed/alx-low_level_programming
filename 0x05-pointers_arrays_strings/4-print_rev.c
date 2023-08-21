@@ -15,6 +15,7 @@ void print_rev(char *s)
 	}
 	for (index = 0; s[index]; index++)
 	{
-		printf("%s", s[size - index]);
+		printf("%c", s[size - index - 1]);
 	}
+	printf("\n");
 }
