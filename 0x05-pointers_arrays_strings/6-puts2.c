@@ -9,9 +9,12 @@ void puts2(char *str)
 {
 	int index;
 
-	for (index = 0; str[index] || str[index - 1]; index += 2)
+	for (index = 0; str[index]; index++)
 	{
-		printf("%c", str[index]);
+		if (i % 2 == 0)
+		{
+			printf("%c", str[index]);
+		}
 	}
 	printf("\n");
 }
