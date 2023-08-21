@@ -9,12 +9,12 @@ void print_rev(char *s)
 {
 	int index, size = 0;
 
-	for (index = 0; str[index]; index++)
+	for (index = 0; s[index]; index++)
 	{
 		size++;
 	}
-	for (index = 0; str[index]; index++)
+	for (index = 0; s[index]; index++)
 	{
-		printf("%s", str[size - index]);
+		printf("%s", s[size - index]);
 	}
 }
