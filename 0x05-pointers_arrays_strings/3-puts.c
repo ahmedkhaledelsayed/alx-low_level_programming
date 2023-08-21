@@ -7,10 +7,10 @@
 
 void _puts(char *str)
 {
-	int index, counter = 0;
+	int index;
 
-	for (index = 0; s[index]; index++)
+	for (index = 0; str[index]; index++)
 	{
-		printf("%s", s[index]);
+		printf("%s", str[index]);
 	}
 }
