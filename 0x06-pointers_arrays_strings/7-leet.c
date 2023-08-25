@@ -21,6 +21,7 @@ char *leet(char *str)
 			{
 				str[index1] = str2[index2];
 			}
+		}
 	}
 	return (str);
 }
