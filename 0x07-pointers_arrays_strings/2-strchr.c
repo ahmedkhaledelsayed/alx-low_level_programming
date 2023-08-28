@@ -11,15 +11,14 @@
 char *_strchr(char *s, char c)
 {
 	int index;
-	char *result = NULL;
 
 	for (index = 0; s[index]; index++)
 	{
 		if (s[index] == c)
 		{
-			result = &s[index];
+			return (&s[index]);
 			break;
 		}
 	}
-	return (result);
+	return (0);
 }
