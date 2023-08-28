@@ -9,7 +9,7 @@
 * Return: pointer to an string
 */
 
-char *_memset(char *s, char b, unsigned int n);
+char *_memset(char *s, char b, unsigned int n)
 {
 	int index;
 
