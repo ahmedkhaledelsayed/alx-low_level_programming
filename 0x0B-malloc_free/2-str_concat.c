@@ -11,7 +11,7 @@ int str_length(char *str)
 {
 	int size = 0;
 
-	while (str[index])
+	while (str[size])
 	{
 		size++;
 	}
