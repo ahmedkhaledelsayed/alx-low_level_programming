@@ -54,7 +54,7 @@ char *str_concat(char *s1, char *s2)
 		}
 		else
 		{
-			sout[index] = s2[index - size2];
+			sout[index] = s2[index - size1];
 		}
 	}
 	sout[index] = '\0';
