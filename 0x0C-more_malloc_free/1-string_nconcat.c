@@ -29,35 +29,37 @@ int str_length(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int index, size1 = 0, size2 = 0;
+	int size1 = 0, size2 = 0;
 	char *sout;
+	unsigned int i;
 
 	if (s1 == NULL)
 	{
-		s1 = "\0";
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = "\0";
+		s2 = "";
 	}
 	size1 = str_length(s1);
 	size2 = str_length(s2);
-	sout = malloc(size1 + size2 + 1);
+	if (n >= size2)
+	{
+		n = size2;
+	}
+	sout = malloc(size1 + n + 1);
 	if (sout == NULL)
 	{
 		return (NULL);
 	}
-	for (index = 0; index < (size1 + size2) && index < (size1 + n); index++)
+	for (i = 0; i < size1; i++)
 	{
-		if (index < size1)
-		{
-			sout[index] = s1[index];
-		}
-		else
-		{
-			sout[index] = s2[index - size2];
-		}
+		sout[i] = s1[i];
 	}
-	sout[index] = '\0';
+	for (i = 0; i < n; i++)
+	{
+		sout[size1 + i] = s2[i];
+	}
+	sout[size1 + n] = '\0';
 	return (sout);
 }
