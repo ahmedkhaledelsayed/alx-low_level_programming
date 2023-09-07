@@ -13,14 +13,22 @@ int main(int argc, char *argv[])
 {
 	int res = 0, index;
 
+	if (argc == 1)
+	{
+	printf("0\n");
+	return (0);
+	}
 	for (index = 0; index < argc; index++)
 	{
-		if (argv[index] < '0' || argv[index] > '9')
+		if (!isdigit(argv[index]))
 		{
 			printf("Error\n");
 			return (1);
 		}
-	res += atoi(argv[index]);
+		else
+		{
+			res += atoi(argv[index]);
+		}
 	}
 	printf("%d\n", res);
 	return (0);
