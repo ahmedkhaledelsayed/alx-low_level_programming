@@ -11,24 +11,24 @@
 
 int main(int argc, char *argv[])
 {
-	int res = 0, index;
+	int res = 0;
 
 	if (argc == 1)
 	{
-	printf("0\n");
-	return (0);
+		printf("0\n");
+		return (0);
 	}
-	for (index = 0; index < argc; index++)
+	for (int index = 1; index < argc; index++)
 	{
-		if (!isdigit(argv[index]))
+		for (int j = 0; argv[index][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[index][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			res += atoi(argv[index]);
-		}
+		res += atoi(argv[index]);
 	}
 	printf("%d\n", res);
 	return (0);
