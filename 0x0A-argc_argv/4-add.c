@@ -12,16 +12,16 @@
 
 int main(int argc, char *argv[])
 {
-	int res = 0;
+	int res = 0, index, j;
 
 	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
-	for (int index = 1; index < argc; index++)
+	for (index = 1; index < argc; index++)
 	{
-		for (int j = 0; argv[index][j] != '\0'; j++)
+		for (j = 0; argv[index][j] != '\0'; j++)
 		{
 			if (!isdigit(argv[index][j]))
 			{
