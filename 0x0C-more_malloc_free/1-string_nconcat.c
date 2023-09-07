@@ -11,7 +11,7 @@ int str_length(char *str)
 {
 	int size = 0;
 
-	while (str[index])
+	while (str[size])
 	{
 		size++;
 	}
@@ -47,7 +47,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	for (index = 0; index < (size1 + size2) && index < (size1 + s2); index++)
+	for (index = 0; index < (size1 + size2) && index < (size1 + n); index++)
 	{
 		if (index < size1)
 		{
