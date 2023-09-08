@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
 * array_range - function that creates an array of integers.
