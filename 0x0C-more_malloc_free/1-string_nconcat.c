@@ -1,36 +1,15 @@
-#include "main.h"
-
 /**
-* str_length - function that measure the string lenght
-*@str: pointer to a string.
-*
-* Return: integer for the length.
-*/
-
-int str_length(char *str)
-{
-	int size = 0;
-
-	while (str[size])
-	{
-		size++;
-	}
-	return (size);
-}
-
-/**
-* string_nconcat - function that concatenates two strings.
-*@s1: pointer to a string.
-*@s2: pointer to a string.
-*@n: integer for required number of s2.
-*
-* Return: pointer to the concatenated two strings.
-*/
-
+ * string_nconcat - function that concatenates two strings.
+ * @s1: pointer to a string.
+ * @s2: pointer to a string.
+ * @n: integer for required number of s2.
+ *
+ * Return: pointer to the concatenated two strings.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int size1 = 0, size2 = 0;
-	char *sout;
+	int size1 = 0, size2 = 0, i, j;
+	char *str;
 	unsigned int i;
 
 	if (s1 == NULL)
@@ -41,14 +20,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	size1 = str_length(s1);
-	size2 = str_length(s2);
-	if (n >= size2)
+	for (size1 = 0; s1[size1]; size1++)
 	{
-		n = size2;
 	}
-	sout = malloc(size1 + n + 1);
-	if (sout == NULL)
+	for (size2 = 0; s1[size2]; size2++)
+	{
+	}
+	str = malloc(size1 + n + 1);
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -56,10 +35,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		sout[i] = s1[i];
 	}
-	for (i = 0; i < n; i++)
+	for (j = 0; j < n; j++)
 	{
-		sout[size1 + i] = s2[i];
+		str[i] = s2[j];
 	}
-	sout[size1 + n] = '\0';
-	return (sout);
+	str[i] = '\0';
+	return (str);
 }
