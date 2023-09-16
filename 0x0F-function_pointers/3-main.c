@@ -30,3 +30,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", op_func(a, b));
 	return (0);
 }
+
