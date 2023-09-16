@@ -31,7 +31,9 @@ void print_s(va_list list, char *sep)
 
 	s = va_arg(list, char *);
 	if (s == NULL)
+	{
 		s = "(nil)";
+	}
 	printf("%s%s", sep, s);
 }
 /**

@@ -6,9 +6,9 @@
 #include <stdlib.h>
 
 /**
- * fm_t - struct fm
- * @fm: pointer to char
- * @p: pointer to function
+ * struct token - struct fm
+ * @token: pointer to char
+ * @f: pointer to function
  * Return: none
  */
 typedef struct token
