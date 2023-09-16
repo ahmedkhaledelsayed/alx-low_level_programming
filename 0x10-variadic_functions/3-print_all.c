@@ -42,7 +42,7 @@ void print_s(va_list list, char *sep)
  */
 void print_f(va_list list, char *sep)
 {
-	printf("%s%f", sep, va_arg(list, double));
+	printf("%s%2f", sep, va_arg(list, double));
 }
 /**
  * print_all - prints out all stuff
