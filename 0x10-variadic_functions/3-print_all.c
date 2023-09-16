@@ -50,27 +50,25 @@ void print_f(va_list list, char *sep)
  */
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	char *sep;
-	int i, j;
-	fm_t fm[] = {
+	va_list ap;
+	char *separator = "";
+	int i = 0, j;
+	token_t tokens[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"f", print_f},
 		{"s", print_s},
 		{NULL, NULL}
 	};
-	va_start(list, format);
-	i = 0;
-	sep = "";
-	while (format != NULL && format[i] != '\0')
+	va_start(ap, format);
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == *(fm[j]).fm)
+			if (format[i] == tokens[j].token[0])
 			{
-				fm[j].p(list, sep);
+				tokens[j].f(separator, ap);
 				sep = ", ";
 			}
 			j++;
@@ -78,5 +76,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_end(list);
+	va_end(ap);
 }
