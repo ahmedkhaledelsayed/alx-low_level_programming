@@ -17,19 +17,19 @@ unsigned int str_ui(char c)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int len, out = 0, exp = 1;
-	if (b == NULL)
+	unsigned int len, out = 0, exp = 1, temp;
+	if (!b)
 	{
 		return (0);
 	}
-	len = str_len(b) - 1;
-	for (;b[len] ;len--, exp *= 2)
+	for (len = str_len(b) - 1; b[len];len--, exp *= 2)
 	{
 		if (b[len] != '0' && b[len] != '1')
 		{
 			return (0);
 		}
-		out += str_ui(b[len]) * exp;
+		temp = str_ui(b[len]);
+		out += temp * exp;
 		//printf("enter for loop len %d \n out = %d \n", len, out);
 	}
 	return (out);
