@@ -18,11 +18,11 @@ unsigned int str_ui(char c)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int len, out = 0, exp = 1, temp;
-	if (!b)
+	if (b == NULL)
 	{
 		return (0);
 	}
-	for (len = str_len(b) - 1; b[len];len--, exp *= 2)
+	for (len = str_len(b) - 1; b[len]; len--, exp *= 2)
 	{
 		if (b[len] != '0' && b[len] != '1')
 		{
@@ -30,7 +30,6 @@ unsigned int binary_to_uint(const char *b)
 		}
 		temp = str_ui(b[len]);
 		out += temp * exp;
-		//printf("enter for loop len %d \n out = %d \n", len, out);
 	}
 	return (out);
 }
