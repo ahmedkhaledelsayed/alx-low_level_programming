@@ -5,7 +5,7 @@
  * @index: index to start at
  * Return: value of the bit at the index
  */
-int get_bit(unsigned long int n, unsigned int index)
+iint get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i;
 
