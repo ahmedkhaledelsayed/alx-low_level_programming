@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * str_len - function that gives the string length.
+ * @str: string to convert
+ * Return: unsigned integer to length
+ */
 unsigned int str_len(const char *str)
 {
 	int i;
@@ -9,12 +13,20 @@ unsigned int str_len(const char *str)
 	}
 	return (i);
 }
-
+/**
+ * str_ui - function that converts a string to integer.
+ * @c: charcter required tobe converted
+ * Return: unsigned integer to decimal number
+ */
 unsigned int str_ui(char c)
 {
 	return ((unsigned int) c - '0');
 }
-
+/**
+ * binary_to_uint - function that converts a binary number to an unsigned int.
+ * @b: string to convert
+ * Return: unsigned integer to decimal number
+ */
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int len, out = 0, exp = 1, temp;
