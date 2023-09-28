@@ -29,7 +29,8 @@ unsigned int str_ui(char c)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int len, out = 0, exp = 1, temp;
+	unsigned int out = 0, exp = 1, temp;
+	int len;
 
 	if (b == NULL)
 	{
