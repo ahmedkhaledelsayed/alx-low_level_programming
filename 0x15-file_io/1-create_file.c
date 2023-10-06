@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * create_file - function that reads a text file and
- * prints it to the POSIX standard output.
+ * create_file - a function that creates a file.
  * @filename: pointer to file.
  * @text_content: pointer to string.
  * Return: 1 if sucess -1 if fail.
